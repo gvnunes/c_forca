@@ -3,6 +3,15 @@
 #include <string.h>
 
 
+void imprimeComEspacos(char* palavra) {
+
+    for (int letra = 0; letra < strlen(palavra); letra++) {
+        printf("%c ", palavra[letra]);
+    }
+    printf("\n");
+}
+
+
 int main() {
 
   char palavraSecreta[20];
@@ -31,10 +40,7 @@ int main() {
     printf("%s", chutes);
     printf("\n");
 
-    printf("%s", palavraRevelada);
-    printf("\n");
-
-
+    imprimeComEspacos(palavraRevelada);
 
     if(strcmp(palavraSecreta, palavraRevelada) == 0) {
       acertou = 1;
@@ -84,7 +90,7 @@ int main() {
         printf("        '-------'       \n\n");
   } else {
      printf("\nPuxa, você foi enforcado!\n");
-        printf("A palavra era **%s**\n\n", palavraSecreta);
+        printf("A palavra era ** %s **\n\n", palavraSecreta);
 
         printf("    _______________         \n");
         printf("   /               \\       \n"); 
