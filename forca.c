@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "forca.h"
 
 void imprimeComEspacos(char* palavra) {
 
@@ -16,13 +16,12 @@ int main() {
 
   char palavraSecreta[20];
   char palavraRevelada[40];
-  sprintf(palavraSecreta, "MELANCIA");
+  sprintf(palavraSecreta, "PAPIBAQUIGRAFO");
 
   int acertou = 0;
   int enforcou = 0;
   int achou = 0;
 
-  const int MAX_ERROS = 5;
   int erros = 0;
 
   char* chutes = malloc(sizeof(char) * MAX_ERROS);
